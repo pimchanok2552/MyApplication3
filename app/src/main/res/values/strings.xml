@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">SBC Change</string>
+
+    <string name="th_exchange">แลกเปลี่ยนเงิน</string>
+    <string name="th_sub_exchange">เงินดอลล่า ไปเป็น เงินบาท</string>
 </resources>

@@ -3,55 +3,72 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--Logo-->
-    <ImageView
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <!--Add Name-->
-    <TextView
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:text="SBC Money Change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--Date-->
-     <TextView
-         android:textColor="@color/colorPrimaryDark"
-         android:layout_marginTop="16dp"
-         android:layout_gravity="center_horizontal"
-         android:textStyle="bold"
-         android:textSize="24dp"
-         android:text="12-6-18"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content" />
-    <!--Rate title-->
-         <TextView
-             android:textColor="@color/colorPrimaryDark"
-             android:layout_marginTop="16dp"
-             android:layout_gravity="center_horizontal"
-             android:textStyle="bold"
-             android:textSize="20dp"
-             android:text="Rate USD/THB"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content" />
-    <!--Rate Value-->
-            <TextView
-               android:textColor="@color/colorPrimaryDark"
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textSize="50dp"
-                android:text="33.12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-    <!--Button Calculate-->
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#82ffffff"
+        android:orientation="vertical">
+
+        <!--Logo-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logo" />
+
+        <!--Add Name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="SBC Money Change"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <!--Date-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="12-6-18"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <!--Rate title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Rate USD/THB"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <!--Rate Value-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="33.12"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+        <!--Button Calculate-->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:text="Calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

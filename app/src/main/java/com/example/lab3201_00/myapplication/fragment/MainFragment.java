@@ -5,7 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.lab3201_00.myapplication.R;
 
@@ -14,6 +16,30 @@ import com.example.lab3201_00.myapplication.R;
  */
 
 public class MainFragment extends Fragment{
+
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // Calculate Controller
+        Button button =getView().findViewById(R.id.btnCalculate);
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+//                Replace Fragment
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentMainFragment, new CalculateFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+
+    } //Main Method
 
     @Nullable
     @Override

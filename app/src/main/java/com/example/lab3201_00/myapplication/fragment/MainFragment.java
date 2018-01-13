@@ -17,12 +17,21 @@ import com.example.lab3201_00.myapplication.R;
 
 public class MainFragment extends Fragment{
 
+    private  double aDouble=33.11;
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         // Calculate Controller
+        calculateController();
+
+
+
+    } //Main Method
+
+    private void calculateController() {
         Button button =getView().findViewById(R.id.btnCalculate);
         button.setOnClickListener(new OnClickListener() {
             @Override
@@ -31,15 +40,12 @@ public class MainFragment extends Fragment{
 //                Replace Fragment
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.contentMainFragment, new CalculateFragment())
+                        .replace(R.id.contentMainFragment, CalculateFragment.calculateInstance(aDouble))
                         .addToBackStack(null)
                         .commit();
             }
         });
-
-
-
-    } //Main Method
+    }
 
     @Nullable
     @Override
